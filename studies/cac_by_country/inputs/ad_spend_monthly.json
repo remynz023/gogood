@@ -1,0 +1,116 @@
+[
+{
+"month": "2025-04",
+"meta_spend": 3498.96,
+"google_spend": 14642.21,
+"total_spend": 18141.17
+},
+{
+"month": "2025-05",
+"meta_spend": 20105.11,
+"google_spend": 15340.0,
+"total_spend": 35445.11
+},
+{
+"month": "2025-06",
+"meta_spend": 27357.01,
+"google_spend": 15168.68,
+"total_spend": 42525.69
+},
+{
+"month": "2025-07",
+"meta_spend": 33821.68,
+"google_spend": 17329.5,
+"total_spend": 51151.18
+},
+{
+"month": "2025-08",
+"meta_spend": 36621.95,
+"google_spend": 17338.11,
+"total_spend": 53960.06
+},
+{
+"month": "2025-09",
+"meta_spend": 30692.17,
+"google_spend": 15107.62,
+"total_spend": 45799.79
+},
+{
+"month": "2025-10",
+"meta_spend": 35791.26,
+"google_spend": 13409.47,
+"total_spend": 49200.73
+},
+{
+"month": "2025-11",
+"meta_spend": 77014.17,
+"google_spend": 18758.23,
+"total_spend": 95772.4
+},
+{
+"month": "2025-12",
+"meta_spend": 33205.84,
+"google_spend": 14752.89,
+"total_spend": 47958.73
+},
+{
+"month": "2026-01",
+"meta_spend": 30793.43,
+"google_spend": 29658.6,
+"total_spend": 60452.03
+},
+{
+"month": "2026-02",
+"meta_spend": 26893.62,
+"google_spend": 27919.14,
+"total_spend": 54812.76
+},
+{
+"month": "2026-03",
+"meta_spend": 43398.41,
+"google_spend": 42444.51,
+"total_spend": 85842.92
+},
+{
+"month": "2026-04",
+"meta_spend": 38929.18,
+"google_spend": 37226.14,
+"total_spend": 76155.32
+},
+{
+"month": "2026-05",
+"meta_spend": 44243.89,
+"google_spend": 38757.71,
+"total_spend": 83001.6
+},
+{
+"month": "2026-06",
+"meta_spend": 43619.46,
+"google_spend": 35831.34,
+"total_spend": 79450.8
+},
+{
+"month": "2026-07",
+"meta_spend": 53008.53,
+"google_spend": 40095.86,
+"total_spend": 93104.39
+},
+{
+"month": "2026-08",
+"meta_spend": 65490.15,
+"google_spend": 40400.76,
+"total_spend": 105890.91
+},
+{
+"month": "2026-09",
+"meta_spend": 67698.16,
+"google_spend": 40277.92,
+"total_spend": 107976.08
+},
+{
+"month": "2026-10",
+"meta_spend": 36109.99,
+"google_spend": 25457.68,
+"total_spend": 61567.67
+}
+]

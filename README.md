@@ -72,3 +72,7 @@ python scripts/gm_history.py --orders data/orders_MAIN_2025-10-01 --country "New
 
 - **3–9 Oct 2026 by country (current cost):** NZ 42.5%, AU 60.7%, HK 59.3%, SG 57.8%; blended 47.9%. NZ prices are about 30% lower than offshore (WPI-U01 ≈ $85 ex GST in NZ vs $122–130).
 - **NZ, last 365 days (cost at sale):** 44.2% average. The 45–49% of Oct–Feb fell to about 40% in Mar–Apr on rising whey isolate cost. A May price rise of about 15–23% lifted it to about 50%. Cost increases since July (WPC-C01 +63% year on year, WPI-U01 +41%) took it back to about 42%.
+
+## Studies
+
+- [CAC by country](studies/cac_by_country/README.md): paid acquisition efficiency by market vs the Head of Growth bonus (work in progress)
