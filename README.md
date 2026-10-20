@@ -59,7 +59,8 @@ Monthly net profit for one ship-to market in NZD ex GST: revenue less product co
 | Product cost | Shopify net sales × Unleashed COGS % at time of sale | Shopify (`go-good-nz#`) orders only |
 | Courier, SG | EasyParcel price per Shopify order, matched on tracking number | SGD → NZD at the monthly ECB average. 96–99% of SG orders match from June 2026. Months with fewer than 50 matches use the average matched cost (~SGD 3.67). |
 | Courier, NZ | NZ Couriers `TotalCost` per consignment (GoSweetSpot), by created date | International Courier parcels excluded |
-| Handling | flat per order | SG: SGD 5 fulfilment. NZ: NZ$3 pick. |
+| Courier, AU | FedEx invoice export (`Net Charge Billed Currency`, NZD) by ship date, from June 2026. Before that, NZ Couriers *International Courier* consignments (GSS) | Shopify `#123456` references only; HF/EL/KN references are another channel. Months with fewer than 50 parcels use the NZ Couriers average (NZ$24.75 per parcel). |
+| Handling | flat per order | SG: SGD 5 fulfilment. NZ and AU: NZ$3 pick. |
 | Ads | Google + Facebook spend targeted at the country (Windsor) | NZD |
 
 The total excludes payment fees, apps, rent and staff.
@@ -91,6 +92,12 @@ python scripts/market_pnl.py --market "New Zealand" --orders data/orders_MAIN_20
     --shopify-monthly data/shopify_nz_monthly.csv --ads data/ads_nz_monthly.csv \
     --gss data/gss_shipments.json --handling 3 --start 2026-01-01 --end 2026-10-17 \
     --csv out/nz_pnl.csv --md reports/nz_pnl.md
+```
+
+**Australia** (`scripts/au_pnl.py`) is a stop-gap until the Unleashed `AUS` warehouse orders are pulled. The Shopify and Windsor monthly figures are hard-coded in the script. Product cost is Shopify `cost_of_goods_sold`, scaled each month by SG's ratio of Unleashed cost-at-sale to Shopify COGS. AU ships from NZ, so handling is NZ$3 per order.
+
+```
+python scripts/au_pnl.py . "FedEx AU.csv" out/au_pnl.csv reports/au_pnl.md
 ```
 
 ### 4. Product net margins: `scripts/product_net_margin.py`
@@ -134,6 +141,7 @@ python scripts/product_net_margin.py --orders data/orders_MAIN_2026-01-01 --mark
 - **Market net profit, Jan–17 Oct 2026** (`reports/sg_pnl.md`, `reports/nz_pnl.md`):
   - **Singapore:** NZ$262.6k on NZ$734.6k revenue, a **35.7%** margin. January to April (\*) predate EasyParcel, so courier cost is the matched average of SGD 3.67 per order.
   - **New Zealand:** NZ$361.9k on NZ$2.41m, a **15.0%** margin.
+  - **Australia** (`reports/au_pnl.md`, estimated): NZ$46.4k on NZ$405.6k, an **11.4%** margin. Jan–Apr made 29–39% with little or no ads. Once Google and Facebook spend reached NZ$15–20k a month from May, the margin fell to around 0%, and it has been slightly negative since September. Ads are about 34% of revenue. FedEx costs about NZ$29–32 per order, against NZ$24.75 on NZ Couriers. Starred months are estimates: Jan, Feb, Apr and May courier (no parcel cost found, and May mostly went NZ Post direct) and October (FedEx invoiced to 13 Oct). Product cost is SG-calibrated Shopify COGS.
   - **What drives the gap:** product cost is 56% of sales in NZ against 42% in SG. Variable selling cost is 31% of revenue in NZ against 21% in SG.
   - **NZ, June to September:** NZ Facebook spend went from NZ$26k a month to NZ$44–45k and the margin fell from 19.8% to 11–12%. October (about NZ$1.5k a day of Facebook) is back at 17.5%.
 - **Product net margins, 1 Jul–17 Oct 2026** (`reports/*_products.md`):
